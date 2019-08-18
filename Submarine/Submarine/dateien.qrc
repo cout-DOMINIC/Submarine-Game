@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/new/sounds">
+        <file>submarine.mp3</file>
+        <file>rocket.mp3</file>
+        <file>no.wav</file>
+        <file>shred.wav</file>
+    </qresource>
+    <qresource prefix="/new/images">
+        <file>jellyfish.png</file>
+        <file>squid.png</file>
+        <file>submarine.png</file>
+        <file>torpedo.png</file>
+        <file>underSea.jpg</file>
+    </qresource>
+</RCC>

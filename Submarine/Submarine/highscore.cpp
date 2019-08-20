@@ -3,7 +3,6 @@
 
 Highscore::Highscore(QGraphicsItem *parent): QGraphicsTextItem(parent)
 {
-    // Den Highscore zuerst initialisieren
     highscore = 0;
 
     setPlainText(QString("Highscore: ") + QString::number(highscore));
@@ -13,13 +12,7 @@ Highscore::Highscore(QGraphicsItem *parent): QGraphicsTextItem(parent)
 
 void Highscore::increase()
 {
-    highscore++;
-
-    /*
-     * Wenn der Highscore sich erhöht, muss sich auch der
-     * Text ändern bzw. die Anzahl, wie viele Gegner ich
-     * getroffen habe
-     */
+    ++highscore;
     setPlainText(QString("Highscore: ") + QString::number(highscore));
 }
 

@@ -10,14 +10,10 @@
 
 Submarine::Submarine(QGraphicsItem* parent): QObject(), QGraphicsPixmapItem (parent)
 {
-    // initialisiert
     torpedoSound = new QMediaPlayer();
     torpedoSound->setMedia(QUrl("qrc:/new/sounds/rocket.mp3"));
 
-    // neues QTimer-Objekt
     QTimer* timer = new QTimer();
-
-    // verbindet SIGNAL mit SLOT
     connect(timer, SIGNAL(timeout()), this, SLOT(die()));
     timer->start(50);
 }
@@ -58,32 +54,12 @@ void Submarine::keyPressEvent(QKeyEvent* event)
         }
     }
 
-    /*
-     * KeyEvent, wenn die Leertaste gedrückt wird,
-     * soll ein neuer Torpedo abgeschossen werden
-     */
     else if (event->key() == Qt::Key_Space)
     {
-        // Neues Torpedo-Objekt erstellt
         Torpedo* torpedo = new Torpedo();
         torpedo->setPos(x(), y());
-
-        /*
-         * Jedes QGraphicsItem hat einen Pointer zur Scene
-         * in der es drin ist.
-         * Nun wollen wir unser Torpedo-Objekt zur gleichen
-         * Scene hinzufügen wo unser Submarine-Objekt drin ist,
-         * da unser Submarine nämlich den Torpedo abschießen wird!
-         * Member-Function scene() -> Neues Torpedo-Objekt zur
-         * Scene hinzugefügt
-         */
         scene()->addItem(torpedo);
 
-
-        /*
-         * Damit beide Sounds zusammen funktionieren, brauchen wir
-         * eine Methode, die den "State" checkt.
-         */
         if (torpedoSound->state() == QMediaPlayer::PlayingState)
         {
             torpedoSound->setPosition(0);
@@ -115,10 +91,7 @@ void Submarine::die()
     delete itemsZerstoeren[i];
     delete this;
 
-    // Sobald alle Items gelöscht wurden, schließt sich die App
     qApp->quit();
-
-    // Sobald die App sich schließt, startet sie erneut
     QProcess::startDetached(qApp->arguments()[0], qApp->arguments());
     }
 

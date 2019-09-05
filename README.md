@@ -2,8 +2,8 @@
 Game I made with Qt in C++
 
 <p align="center">
-    <img src="./Ingame-Screenshots/screenshot1.png"  width="49%" height="49%">
-    <img src="./Ingame-Screenshots/screenshot2.png"  width="49%" height="49%">
+    <img src="./doc/screenshot1.png"  width="49%" height="49%">
+    <img src="./doc/screenshot2.png"  width="49%" height="49%">
 </p>
 <br/>
 

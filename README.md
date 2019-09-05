@@ -7,4 +7,4 @@ Game I made with Qt in C++
 </p>
 <br/>
 
-In the fifth semester of my bachelor studies at the Beuth University of Applied Sciences I developed this game in a four-member team. We used Unity with C#. In addition to the implementation of various features, I supported the team as Scrum Master. The topic was "Little Rocket Man" and the game focusses to explore an open-world and to solve tricky puzzles.
+In the forth semester of my bachelor studies at the Beuth University of Applied Sciences a classmate and I developed our very first game in with the framework Qt and C++ called Submarine. We used Unity with C#.

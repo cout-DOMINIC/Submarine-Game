@@ -2,7 +2,7 @@
 Game I made with Qt in C++
 
 <p align="center">
-    <img src="./ingame-screenshots/screenshot1.png"  width="49%" height="49%">
+    <img src="./Ingame-Screenshots/screenshot1.png"  width="49%" height="49%">
 </p>
 <br/><br/>
 <p align="center" style="font-size:22px">

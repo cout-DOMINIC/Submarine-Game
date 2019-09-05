@@ -7,4 +7,4 @@ A game I made with Qt in C++
 </p>
 <br/>
 
-In the forth semester of my bachelor studies at the Beuth University of Applied Sciences a classmate and I developed our very first game in with the framework Qt and C++ called Submarine. We used Unity with C#.
+In the forth semester of my bachelor studies at the Beuth University of Applied Sciences a classmate and I developed our very first game with the framework Qt and C++ called Submarine. We used Unity with C#.

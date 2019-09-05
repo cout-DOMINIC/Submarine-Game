@@ -1,4 +1,4 @@
-# Submarine-Game
+# Submarine
 A game I made with Qt in C++
 
 <p align="center">

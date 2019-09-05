@@ -1,5 +1,5 @@
 # Submarine-Game
-Game I made with Qt in C++
+A game I made with Qt in C++
 
 <p align="center">
     <img src="./doc/screenshot1.png"  width="49%" height="49%">

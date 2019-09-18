@@ -2,8 +2,8 @@
 Besides Tic Tac Toe, Submarine was one of my very first games I have ever developed.
 
 <p align="center">
-    <img src="./doc/screenshot1.png"  width="49%" height="49%">
-    <img src="./doc/screenshot2.png"  width="49%" height="49%">
+    <img src="./doc/01screenshot.png"  width="49%" height="49%">
+    <img src="./doc/02screenshot.png"  width="49%" height="49%">
 </p>
 <br/>
 As part of my studies in the fourth semester of my bachelor studies at the Beuth University of Applied Sciences a classmate and I developed Submarine with the framework Qt in C++. It was also my very first time to code in C++ and I really loved it.

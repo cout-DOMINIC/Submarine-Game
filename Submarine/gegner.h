@@ -7,7 +7,7 @@
 class Gegner: public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
-
+bool init;
 public:
     Gegner(QGraphicsItem* parent = nullptr);
 

@@ -34,13 +34,17 @@ SOURCES += \
     submarine.cpp \
     torpedo.cpp \
     gegner.cpp \
-    highscore.cpp
+    score.cpp \
+    level.cpp \
+    spiel.cpp
 
 HEADERS += \
     submarine.h \
     torpedo.h \
     gegner.h \
-    highscore.h
+    score.h \
+    level.h \
+    spiel.h
 
 FORMS += \
         mainwindow.ui

@@ -12,7 +12,6 @@ Submarine::Submarine(QGraphicsItem* parent): QObject(), QGraphicsPixmapItem (par
 {
     torpedoSound = new QMediaPlayer();
     torpedoSound->setMedia(QUrl("qrc:/new/sounds/rocket.mp3"));
-
     QTimer* timer = new QTimer();
     connect(timer, SIGNAL(timeout()), this, SLOT(die()));
     timer->start(50);
@@ -20,8 +19,6 @@ Submarine::Submarine(QGraphicsItem* parent): QObject(), QGraphicsPixmapItem (par
 
 void Submarine::keyPressEvent(QKeyEvent* event)
 {
-    qDebug() << "Du hast etwas gedrückt.";
-
     if (event->key() == Qt::Key_Left)
     {
         if (pos().x() > 0)
@@ -59,7 +56,6 @@ void Submarine::keyPressEvent(QKeyEvent* event)
         Torpedo* torpedo = new Torpedo();
         torpedo->setPos(x(), y());
         scene()->addItem(torpedo);
-
         if (torpedoSound->state() == QMediaPlayer::PlayingState)
         {
             torpedoSound->setPosition(0);
@@ -80,17 +76,14 @@ void Submarine::spawn()
 void Submarine::die()
 {
     QList<QGraphicsItem*> itemsZerstoeren = collidingItems();
-    qDebug() << "AAAAAAAAAHHHHHH";
     for(int i = 0; i<itemsZerstoeren.size();i++)
     {
     if(typeid(*(itemsZerstoeren[i])) == typeid(Gegner))
 {
     scene()->removeItem(itemsZerstoeren[i]);
     scene()->removeItem(this);
-
     delete itemsZerstoeren[i];
     delete this;
-
     qApp->quit();
     QProcess::startDetached(qApp->arguments()[0], qApp->arguments());
     }

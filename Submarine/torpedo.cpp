@@ -1,10 +1,13 @@
 #include "torpedo.h"
-#include "highscore.h"
+#include "score.h"
 #include "submarine.h"
 #include <QTimer>
 #include <QGraphicsScene>
 #include "gegner.h"
+#include "spiel.h"
 #include <QList>
+
+extern Spiel * spiel;
 
 Torpedo::Torpedo(QGraphicsItem* parent): QObject(),  QGraphicsPixmapItem(parent)
 {
@@ -16,16 +19,14 @@ Torpedo::Torpedo(QGraphicsItem* parent): QObject(),  QGraphicsPixmapItem(parent)
 
 void Torpedo::move()
 {
-    Highscore* highscore = new Highscore();
     QList<QGraphicsItem*> itemsZerstoeren = collidingItems();
-
     for(int i = 0; i < itemsZerstoeren.size(); i++){
         if(typeid(*(itemsZerstoeren[i])) == typeid(Gegner))
         {
             QMediaPlayer* sounds = new QMediaPlayer();
             sounds->setMedia(QUrl("qrc:/new/sounds/shred.wav"));
             sounds->play();
-            highscore->increase();
+            spiel->score->increase();
             scene()->removeItem(itemsZerstoeren[i]);
             scene()->removeItem(this);
             delete itemsZerstoeren[i];
@@ -33,7 +34,6 @@ void Torpedo::move()
             return;
         }
     }
-
     setPos(x(), y()-15);
     if(pos().y() < -50)
     {
